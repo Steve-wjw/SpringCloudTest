@@ -95,6 +95,19 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <delimiters>
+                        <!--以$开头的或者结尾的在src/main/resources路径下的就能读取-->
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
