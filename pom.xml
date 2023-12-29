@@ -14,6 +14,9 @@
         <module>springcloud-eureka-7001</module>
         <module>springcloud-eureka-7002</module>
         <module>springcloud-eureka-7003</module>
+        <module>springcloud-consumer-dept-ribbon-8000</module>
+        <module>springcloud-provider-dept-8002</module>
+        <module>springcloud-provider-dept-8003</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -92,18 +95,6 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <delimiters>
-                        <!--以$开头的或者结尾的在src/main/resources路径下的就能读取-->
-                        <delimit>$</delimit>
-                    </delimiters>
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 
 </project>

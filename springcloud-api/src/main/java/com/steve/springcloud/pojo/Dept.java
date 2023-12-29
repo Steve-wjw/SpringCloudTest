@@ -1,5 +1,6 @@
 package com.steve.springcloud.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -23,7 +24,7 @@ import java.io.Serializable;
 @TableName(value = "dept", autoResultMap = true)
 public class Dept implements Serializable {
 
-    @TableId("deptno")
+    @TableId(value = "deptno", type = IdType.AUTO)
     private Long deptNo;
 
     @TableField("dname")
