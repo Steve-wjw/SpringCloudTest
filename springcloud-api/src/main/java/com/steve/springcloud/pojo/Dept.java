@@ -27,10 +27,8 @@ public class Dept implements Serializable {
     @TableId(value = "deptno", type = IdType.AUTO)
     private Long deptNo;
 
-    @TableField("dname")
     private String dname;
 
-    @TableField("db_source")
     private String dbSource;
 
     public Dept(String dname) {
