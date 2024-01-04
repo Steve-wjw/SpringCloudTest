@@ -1,6 +1,10 @@
 server:
   port: 9001
 
+feign:
+  hystrix:
+    enabled: true
+
 # Eureka配置
 eureka:
   client:
