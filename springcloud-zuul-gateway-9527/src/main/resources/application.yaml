@@ -1,0 +1,45 @@
+server:
+  port: 9527
+
+#spring的相关配置
+spring:
+  application:
+    name: springcloud-zuul-gateway
+
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gateway9527.com
+    prefer-ip-address: false # true访问路径可以显示IP地址
+
+#info配置
+info:
+  app.name: steve-springcloud
+  company.name: www.steve.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+#zuul:
+#  routes:
+#    users:
+#      path: /mypayment/**
+#      url: http://127.0.0.1:8001
+
+#zuul:
+#  routes: # 路由映射配置
+#    mypayment.path: /mypayment/**                #/myusers被转发到服务名称为cloud-payment-service的服务
+#    mypayment.serviceId: springcloud-provider-dept   #注册进eureka服务器的服务名称
+
+zuul:
+  routes:
+    springcloud-provider-dept: /mypayment/**
+  ignored-services: springcloud-provider-dept
+  prefix: /hhh
+
+#zuul:
+#  ignoredPatterns: /**/admin/**
+#  routes:
+#    springcloud-provider-dept: /myusers/**
