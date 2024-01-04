@@ -19,6 +19,7 @@
         <module>springcloud-provider-dept-8003</module>
         <module>springcloud-consumer-dept-feign-8000</module>
         <module>springcloud-provider-dept-hystrix-8001</module>
+        <module>springcloud-consumer-hystrix-dashboard-9002</module>
     </modules>
 
     <packaging>pom</packaging>
